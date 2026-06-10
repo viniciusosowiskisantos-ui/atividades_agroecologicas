@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável - Repositório Pedagógico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#repositorio">Repositório de Atividades</a>
+        <a href="#contribuir">Enviar Atividade</a>
+    </nav>
+
+    <header id="inicio">
+        <h1>Agro Forte, Futuro Sustentável</h1>
+        <p>Recursos pedagógicos interdisciplinares para o Ensino Médio. Conectando tecnologia, computação e o equilíbrio entre a produção e a preservação do meio ambiente.</p>
+    </header>
+
+    <div class="container">
+        
+        <section>
+            <h2>Sobre o Projeto</h2>
+            <p>Este site foi desenvolvido como uma ferramenta de suporte para professores dos componentes de <strong>Educação Digital, Computação e Pensamento Computacional</strong>, bem como das disciplinas tradicionais. Aqui, reunimos propostas práticas de atividades que utilizam a tecnologia para investigar e propor soluções para o agronegócio sustentável no Brasil.</p>
+        </section>
+
+        <section id="repositorio">
+            <h2>Repositório de Atividades</h2>
+            <p style="margin-bottom: 20px;">Filtre as atividades por componente curricular:</p>
+            
+            <div class="filter-container">
+                <button class="filter-btn active" onclick="filterActivities('todos', event)">Todos</button>
+                <button class="filter-btn" onclick="filterActivities('ciências', event)">Ciências</button>
+                <button class="filter-btn" onclick="filterActivities('matemática', event)">Matemática</button>
+                <button class="filter-btn" onclick="filterActivities('português', event)">Português</button>
+                <button class="filter-btn" onclick="filterActivities('história', event)">História</button>
+                <button class="filter-btn" onclick="filterActivities('geografia', event)">Geografia</button>
+            </div>
+
+            <div class="repo-grid" id="repoGrid">
+                </div>
+        </section>
+
+        <section id="contribuir">
+            <h2>Contribua com o Repositório</h2>
+            <p style="margin-bottom: 25px;">É professor e desenvolveu uma atividade sobre a temática? Compartilhe conosco para expandir nossa rede!</p>
+            
+            <form id="activityForm">
+                <div class="form-group">
+                    <label for="teacherName">Nome do(a) Professor(a):</label>
+                    <input type="text" id="teacherName" required placeholder="Ex: Prof. Silva">
+                </div>
+                
+                <div class="form-group">
+                    <label for="activitySubject">Disciplina / Componente:</label>
+                    <select id="activitySubject" required>
+                        <option value="ciências">Ciências da Natureza</option>
+                        <option value="matemática">Matemática</option>
+                        <option value="português">Língua Portuguesa</option>
+                        <option value="história">História</option>
+                        <option value="geografia">Geografia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="activityTitle">Título da Atividade:</label>
+                    <input type="text" id="activityTitle" required placeholder="Ex: Infográfico da Agricultura 4.0">
+                </div>
+
+                <div class="form-group">
+                    <label for="activityDesc">Descrição / Instruções da Atividade:</label>
+                    <textarea id="activityDesc" required placeholder="Descreva brevemente os objetivos, dinâmica e como a computação/tecnologia é aplicada..."></textarea>
+                </div>
+
+                <button type="submit">Publicar no Repositório</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Projeto Escolar Front-End. Desenvolvido para as disciplinas de Computação e IA / Pensamento Computacional.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
